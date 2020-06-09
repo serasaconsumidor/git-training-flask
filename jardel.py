@@ -58,9 +58,11 @@ def get_dias(data):
     return dias_divida
 
 def return_risco(idade, score):
-    if(idade < 20):
+    if idade < 18:
+        return 0
+    elif idade < 20:
         return score / 3
-    elif(idade < 22):
+    elif idade < 22:
         return score / 2
     return score / 1.5
 
